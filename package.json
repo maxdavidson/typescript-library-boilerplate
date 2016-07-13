@@ -1,6 +1,6 @@
 {
   "name": "typescript-library-boilerplate",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Boilerplate for TypeScript 2.0 libraries",
   "author": "Max Davidson <davidsonmax@gmail.com>",
   "license": "MIT",
