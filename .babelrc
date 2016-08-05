@@ -1,5 +1,8 @@
 {
   "presets": [
-    "es2015-loose-rollup"
+    ["es2015", { "modules": false, "loose": true }]
+  ],
+  "plugins": [
+    "external-helpers"
   ]
 }
