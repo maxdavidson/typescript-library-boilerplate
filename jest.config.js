@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+/* eslint-disable */
 var semver = require('semver');
 
 function getSupportedTypescriptTarget() {
   var nodeVersion = process.versions.node;
 
   if (semver.gt(nodeVersion, '7.6.0')) {
-    return 'es2017'
+    return 'es2017';
   } else if (semver.gt(nodeVersion, '7.0.0')) {
     return 'es2016';
   } else if (semver.gt(nodeVersion, '6.0.0')) {
@@ -19,21 +20,21 @@ function getSupportedTypescriptTarget() {
 
 var jestConfig = {
   transform: {
-    ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    '.(ts|tsx)': '<rootDir>/node_modules/ts-jest/preprocessor.js',
   },
-  testResultsProcessor: "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
-  testRegex: "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  testResultsProcessor: '<rootDir>/node_modules/ts-jest/coverageprocessor.js',
+  testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
   testPathIgnorePatterns: [
-    "<rootDir>[/\\\\](dist|coverage|node_modules)[/\\\\]",
-    "_\\w*.\\w+$"
+    '<rootDir>[/\\\\](dist|coverage|node_modules)[/\\\\]',
+    '_\\w*.\\w+$',
   ],
-  moduleFileExtensions: ["ts", "tsx", "js"],
+  moduleFileExtensions: ['ts', 'tsx', 'js'],
   globals: {
     __TS_CONFIG__: {
       target: getSupportedTypescriptTarget(),
-      inlineSourceMap: true
-    }
-  }
+      inlineSourceMap: true,
+    },
+  },
 };
 
 module.exports = jestConfig;

@@ -16,7 +16,7 @@
     "build:umd": "npm run build:es && rollup --config && dts-bundle --name dist/bundle --main es --outputAsModuleFolder",
     "clean": "rimraf dist es lib coverage",
     "typecheck": "tsc --noEmit",
-    "lint": "tslint --project tsconfig.json --type-check --format stylish",
+    "lint": "eslint . --ext .ts,.tsx,.js",
     "test": "jest --coverage --no-cache --config $(node jest.config.js)",
     "test:watch": "jest --watch --updateSnapshot --config $(node jest.config.js)",
     "prepare": "npm run build",
@@ -44,6 +44,9 @@
   "devDependencies": {
     "@types/jest": "^19.2.2",
     "dts-bundle": "^0.7.2",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
     "jest": "^19.0.2",
     "jest-environment-node-debug": "^2.0.0",
     "pascal-case": "^2.0.1",
@@ -57,7 +60,7 @@
     "rollup-plugin-uglify": "^1.0.1",
     "semver": "^5.3.0",
     "ts-jest": "^19.0.2",
-    "tslint": "^4.5.1",
-    "typescript": "^2.2.1"
+    "typescript": "^2.2.1",
+    "typescript-eslint-parser": "^2.0.0"
   }
 }
