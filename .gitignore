@@ -4,5 +4,6 @@ tmp
 typings
 coverage
 .nyc_output
-.vscode/.browse*
+.vscode/*
+!.vscode/**/*.json
 npm-debug.log
