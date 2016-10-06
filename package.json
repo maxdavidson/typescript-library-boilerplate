@@ -36,8 +36,8 @@
     "es2015"
   ],
   "engines": {
-    "node": ">=4.4.7",
-    "npm": ">=2.15.8"
+    "node": ">=4.6.0",
+    "npm": ">=2.15.9"
   },
   "dependencies": {},
   "devDependencies": {
