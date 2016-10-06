@@ -8,7 +8,7 @@ const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
 const moduleId = paramCase(pkg.name);
 const moduleName = pascalCase(pkg.name);
 
-appendFileSync('./es2015/index.d.ts', `export as namespace ${moduleName};\n`);
+appendFileSync('./typings/index.d.ts', `export as namespace ${moduleName};\n`);
 
 export default {
   entry: 'es2015/index.js',

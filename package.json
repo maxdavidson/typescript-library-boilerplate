@@ -11,10 +11,10 @@
   "main": "dist/typescript-library-boilerplate.js",
   "module": "dist/typescript-library-boilerplate.es.js",
   "jsnext:main": "dist/typescript-library-boilerplate.es.js",
-  "typings": "es2015/index.d.ts",
+  "typings": "typings/index.d.ts",
   "scripts": {
     "build": "tsc && rollup -c",
-    "clean": "rimraf dist es2015 coverage .nyc_output",
+    "clean": "rimraf dist typings es2015 coverage .nyc_output",
     "lint": "tslint --project tsconfig.json",
     "test": "nyc ava --reporter=text --reporter=html",
     "upload-coverage": "nyc report --reporter=text-lcov | coveralls",
@@ -33,7 +33,7 @@
   ],
   "files": [
     "dist",
-    "es2015"
+    "typings"
   ],
   "engines": {
     "node": ">=4.6.0",

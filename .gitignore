@@ -1,6 +1,7 @@
 node_modules
 dist
 es2015
+typings
 coverage
 .nyc_output
 .vscode/.browse*
