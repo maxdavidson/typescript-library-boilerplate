@@ -19,6 +19,7 @@ export default {
   plugins: [
     nodeResolve({
       main: true,
+      module: true,
       jsnext: true
     }),
     commonjs({
