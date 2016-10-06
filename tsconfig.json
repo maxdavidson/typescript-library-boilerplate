@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "es2015",
     "target": "es5",
-    "outDir": "es2015",
+    "outDir": "tmp",
     "lib": ["dom", "es5"],
     "moduleResolution": "node",
     "inlineSourceMap": true,

@@ -14,7 +14,7 @@
   "typings": "typings/index.d.ts",
   "scripts": {
     "build": "tsc && rollup -c",
-    "clean": "rimraf dist typings es2015 coverage .nyc_output",
+    "clean": "rimraf dist typings tmp coverage .nyc_output",
     "lint": "tslint --project tsconfig.json",
     "test": "nyc ava --reporter=text --reporter=html",
     "upload-coverage": "nyc report --reporter=text-lcov | coveralls",

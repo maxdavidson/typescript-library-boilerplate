@@ -11,7 +11,7 @@ const moduleName = pascalCase(pkg.name);
 appendFileSync('./typings/index.d.ts', `export as namespace ${moduleName};\n`);
 
 export default {
-  entry: 'es2015/index.js',
+  entry: 'tmp/index.js',
   sourceMap: (process.env.NODE_ENV === 'test') ? 'inline' : true,
   moduleId,
   moduleName,
