@@ -3,7 +3,6 @@ import { readFileSync, appendFileSync } from 'fs';
 import sourcemaps from 'rollup-plugin-sourcemaps';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import babel from 'rollup-plugin-babel';
 
 const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
 const moduleId = paramCase(pkg.name);
@@ -27,9 +26,6 @@ export default {
     }),
     sourcemaps({
       exclude: 'src/**'
-    }),
-    babel({
-      exclude: 'node_modules/**'
     })
   ],
   targets: [
