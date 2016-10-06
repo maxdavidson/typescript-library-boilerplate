@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "es2015",
+    "module": "commonjs",
     "target": "es5",
     "outDir": "tmp",
-    "lib": ["dom", "es5"],
+    "lib": ["dom", "es2015", "es2016", "es2017"],
     "moduleResolution": "node",
     "inlineSourceMap": true,
     "inlineSources": true,

@@ -12,7 +12,7 @@ appendFileSync('./typings/index.d.ts', `export as namespace ${moduleName};\n`);
 
 export default {
   entry: 'tmp/index.js',
-  sourceMap: (process.env.NODE_ENV === 'test') ? 'inline' : true,
+  sourceMap: true,
   moduleId,
   moduleName,
   plugins: [
