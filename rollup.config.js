@@ -30,6 +30,6 @@ export default {
   ],
   targets: [
     { dest: `dist/${moduleId}.js`, format: 'umd' },
-    { dest: `dist/${moduleId}.mjs`, format: 'es' },
+    { dest: `dist/${moduleId}.es.js`, format: 'es' },
   ],
 };
