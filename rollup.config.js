@@ -21,6 +21,6 @@ export default {
     nodeGlobals(),
     nodeBuiltins(),
     commonjs(),
-    //uglify()
+    uglify()
   ]
 };
