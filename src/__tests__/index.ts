@@ -1,5 +1,5 @@
 import test from "ava";
-import HelloWorld from "..";
+import { HelloWorld } from "..";
 
 test("hello world", t => {
   const thing = new HelloWorld("neat");

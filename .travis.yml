@@ -7,4 +7,4 @@ cache:
   directories:
     - node_modules
 after_success:
-  - npm run upload-coverage
+  - npm run coveralls

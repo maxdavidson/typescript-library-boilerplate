@@ -1,35 +1,26 @@
-import { paramCase, pascalCase } from 'change-case';
-import { readFileSync, appendFileSync } from 'fs';
 import sourcemaps from 'rollup-plugin-sourcemaps';
 import nodeResolve from 'rollup-plugin-node-resolve';
+import nodeGlobals from 'rollup-plugin-node-globals';
+import nodeBuiltins from 'rollup-plugin-node-builtins';
 import commonjs from 'rollup-plugin-commonjs';
+import uglify from 'rollup-plugin-uglify';
+import pascalCase from 'pascal-case';
 
-const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
-const moduleId = paramCase(pkg.name);
-const moduleName = pascalCase(pkg.name);
-
-appendFileSync('./typings/index.d.ts', `export as namespace ${moduleName};\n`);
+const pkg = require('./package');
 
 export default {
-  entry: 'tmp/index.js',
+  moduleId: pkg.name,
+  moduleName: pascalCase(pkg.name),
+  entry: 'es2015/index.js',
+  dest: 'dist/bundle.js',
+  format: 'umd',
   sourceMap: true,
-  moduleId,
-  moduleName,
   plugins: [
-    nodeResolve({
-      main: true,
-      module: true,
-      jsnext: true
-    }),
-    commonjs({
-      include: 'node_modules/**'
-    }),
-    sourcemaps({
-      exclude: 'src/**'
-    })
-  ],
-  targets: [
-    { dest: `dist/${moduleId}.js`, format: 'umd' },
-    { dest: `dist/${moduleId}.es.js`, format: 'es' },
-  ],
+    sourcemaps(),
+    nodeResolve({ jsnext: true }),
+    nodeGlobals(),
+    nodeBuiltins(),
+    commonjs(),
+    //uglify()
+  ]
 };

@@ -1,7 +1,11 @@
 {
+  "all": true,
   "cache": true,
-  "reporters": [
-    "text",
-    "html"
+  "include": [
+    "es2015/**/*.js"
+  ],
+  "reporter": [
+    "html",
+    "text"
   ]
 }

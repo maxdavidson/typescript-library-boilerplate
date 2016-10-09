@@ -1,4 +1,4 @@
-export default class HelloWorld {
+export class HelloWorld {
   public readonly foo: string;
 
   constructor(foo: string) {
