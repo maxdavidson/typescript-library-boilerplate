@@ -41,7 +41,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^0.17.0",
     "change-case": "^3.0.0",
     "coveralls": "^2.11.11",
     "cross-env": "^3.0.0",
