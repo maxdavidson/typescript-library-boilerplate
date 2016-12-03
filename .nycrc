@@ -1,7 +1,0 @@
-{
-  "cache": true,
-  "reporters": [
-    "text",
-    "html"
-  ]
-}
