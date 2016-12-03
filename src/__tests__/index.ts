@@ -1,8 +1,7 @@
-import test from "ava";
 import { HelloWorld } from "..";
 
-test("hello world", t => {
+test("hello world", () => {
   const thing = new HelloWorld("neat");
 
-  t.is(thing.getMessage(), "Hello, this is neat");
+  expect(thing.getMessage()).toBe("Hello, this is neat");
 });
