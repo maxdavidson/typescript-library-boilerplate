@@ -12,12 +12,6 @@ Opinionated boilerplate for TypeScript 2.0 libraries.
 
 * [TypeScript 2.0](http://www.typescriptlang.org)
 * Code quality with [tslint](http://palantir.github.io/tslint/)
-* Module bundling with [Rollup](http://rollupjs.org) (finalized as UMD and ES module)
-* Unit testing with [AVA](https://github.com/avajs/ava) and [nyc](https://github.com/istanbuljs/nyc)
+* Module bundling with [Rollup](http://rollupjs.org)
+* Unit testing with [Jest](https://github.com/facebook/jest)
 * Continuous integration with [Travis](https://travis-ci.org)
-
-
-## Caveats
-
-* External modules will be bundled by default.
-  * To prevent this, remove the `nodeResolve` and `commonjs` plugins from `rollup.config.js`.
