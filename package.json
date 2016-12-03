@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/maxdavidson/typescript-library-boilerplate.git"
   },
+  "engines": {
+    "npm": ">=3.0.0"
+  },
   "main": "dist/commonjs/index.js",
   "module": "dist/es2015/index.js",
   "jsnext:main": "dist/es2015/index.js",
@@ -21,8 +24,7 @@
     "build:umd": "npm run build:es2015 && rollup --config",
     "clean": "rimraf dist coverage",
     "lint": "tslint --project tsconfig.json --format stylish",
-    "test": "jest",
-    "coveralls": "cat coverage/remapped/coverage-final.json | coveralls",
+    "test": "jest --coverage ",
     "prebuild": "npm run clean",
     "posttest": "npm run lint",
     "preversion": "npm test",
