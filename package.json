@@ -46,7 +46,7 @@
     "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "testPathIgnorePatterns": [
-      "/node_modules/",
+      "<rootDir>[/\\\\](dist|coverage|node_modules)[/\\\\]",
       "_\\w*.\\w+$"
     ],
     "moduleFileExtensions": [
