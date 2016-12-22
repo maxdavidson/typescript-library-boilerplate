@@ -28,8 +28,7 @@
     "prebuild": "npm run clean",
     "posttest": "npm run lint",
     "preversion": "npm test",
-    "postversion": "git push && git push --tags",
-    "prepublish": "npm run build"
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "typescript",
