@@ -65,7 +65,7 @@
     "pascal-case": "^2.0.0",
     "rimraf": "^2.5.3",
     "rollup": "^0.38.0",
-    "rollup-plugin-commonjs": "^5.0.3",
+    "rollup-plugin-commonjs": "^6.0.1",
     "rollup-plugin-node-builtins": "^2.0.0",
     "rollup-plugin-node-globals": "^1.0.9",
     "rollup-plugin-node-resolve": "^2.0.0",
