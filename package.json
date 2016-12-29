@@ -24,7 +24,7 @@
     "build:umd": "npm run build:es2015 && rollup --config",
     "clean": "rimraf dist coverage",
     "lint": "tslint --project tsconfig.json --format stylish",
-    "test": "jest --coverage ",
+    "test": "jest --config jest.config.json --coverage",
     "prebuild": "npm run clean",
     "posttest": "npm run lint",
     "preversion": "npm test",
@@ -39,22 +39,6 @@
   "files": [
     "dist"
   ],
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testPathIgnorePatterns": [
-      "<rootDir>[/\\\\](dist|coverage|node_modules)[/\\\\]",
-      "_\\w*.\\w+$"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ]
-  },
   "dependencies": {
     "@types/node": "^6.0.45"
   },
