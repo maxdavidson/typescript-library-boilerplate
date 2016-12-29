@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@types/jest": "^16.0.1",
-    "jest": "^17.0.3",
+    "jest": "^18.0.0",
     "pascal-case": "^2.0.0",
     "rimraf": "^2.5.3",
     "rollup": "^0.38.0",
