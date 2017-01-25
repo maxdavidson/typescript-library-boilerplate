@@ -55,7 +55,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-sourcemaps": "^0.4.0",
     "rollup-plugin-uglify": "^1.0.1",
-    "ts-jest": "18.0.0",
+    "ts-jest": "18.0.2",
     "tslint": "^4.0.2",
     "typescript": "^2.1.4"
   }
