@@ -44,7 +44,7 @@
     "@types/node": "^7.0.4"
   },
   "devDependencies": {
-    "@types/jest": "^16.0.1",
+    "@types/jest": "^18.0.0",
     "jest": "18.1.0",
     "pascal-case": "^2.0.0",
     "rimraf": "^2.5.3",
