@@ -19,7 +19,7 @@
     "build:umd": "npm run build:es && rollup --config && dts-bundle --name typings --main dist/es --outputAsModuleFolder",
     "clean": "rimraf dist coverage",
     "typecheck": "tsc --noEmit",
-    "lint": "tslint --project tsconfig.json --format stylish",
+    "lint": "tslint --project tsconfig.json --type-check --format stylish",
     "test": "jest --config jest.config.json --coverage --no-cache --runInBand",
     "test:watch": "jest --config jest.config.json --watch",
     "prebuild": "npm run clean",

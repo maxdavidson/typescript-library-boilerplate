@@ -1,13 +1,13 @@
-export * from "./utils";
+export * from './utils';
 
 export class HelloWorld {
-  public readonly foo: string;
+  readonly foo: string;
 
   constructor(foo: string) {
     this.foo = foo;
   }
 
-  public getMessage() {
+  getMessage() {
     return `Hello, this is ${this.foo}`;
   }
 }
