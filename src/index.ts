@@ -1,3 +1,5 @@
+export * from "./utils";
+
 export class HelloWorld {
   public readonly foo: string;
 

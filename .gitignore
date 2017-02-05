@@ -32,7 +32,6 @@ build/Release
 
 # Dependency directories
 node_modules
-jspm_packages
 
 # Optional npm cache directory
 .npm
@@ -48,11 +47,10 @@ jspm_packages
 
 # Distributed files
 dist
-es2015
-
 
 ### VisualStudioCode ###
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
+!.vscode/*.json
+
+# Other stuff
+.code
