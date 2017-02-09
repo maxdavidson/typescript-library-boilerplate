@@ -37,7 +37,8 @@
     "dist"
   ],
   "dependencies": {
-    "@types/node": "^7.0.5"
+    "@types/node": "^7.0.5",
+    "tslib": "^1.5.0"
   },
   "devDependencies": {
     "@types/jest": "^18.1.1",
