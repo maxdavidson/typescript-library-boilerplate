@@ -41,7 +41,7 @@
     "tslib": "^1.5.0"
   },
   "devDependencies": {
-    "@types/jest": "^18.1.1",
+    "@types/jest": "^19.2.0",
     "dts-bundle": "^0.7.2",
     "jest": "^19.0.0",
     "pascal-case": "^2.0.0",
