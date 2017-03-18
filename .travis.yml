@@ -6,8 +6,6 @@ node_js:
 cache:
   directories:
     - node_modules
-before_install:
-  - if [[ $(npm --version) == 2* ]]; then npm install -g npm@latest-3; fi
 after_success:
   - npm i -g coveralls
   - cat coverage/remapped/lcov.info | coveralls
