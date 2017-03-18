@@ -11,7 +11,7 @@ const pkg = require('./package');
 export default {
   moduleId: pkg.name,
   moduleName: pascalCase(pkg.name),
-  entry: 'dist/es/index.js',
+  entry: 'es/index.js',
   dest: 'dist/bundle.js',
   format: 'umd',
   exports: 'named',

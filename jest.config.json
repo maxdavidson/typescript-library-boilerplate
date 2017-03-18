@@ -12,5 +12,11 @@
     "ts",
     "tsx",
     "js"
-  ]
+  ],
+  "globals": {
+    "__TS_CONFIG__": {
+      "target": "es5",
+      "inlineSourceMap": true
+    }
+  }
 }
