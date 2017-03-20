@@ -1,20 +1,18 @@
 {
   "name": "typescript-library-boilerplate",
   "version": "0.1.0",
-  "description": "Boilerplate for TypeScript 2.0 libraries",
+  "description": "Boilerplate for TypeScript libraries",
   "author": "Max Davidson <davidsonmax@gmail.com>",
   "license": "MIT",
   "repository": "git+https://github.com/maxdavidson/typescript-library-boilerplate.git",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "browser": "dist/bundle.js",
-  "types": "dist/bundle.d.ts",
+  "types": "es/index.d.ts",
   "scripts": {
-    "build": "npm run build:lib & npm run build:umd",
+    "build": "npm run build:lib & npm run build:es",
     "build:lib": "tsc --outDir lib --module commonjs",
     "build:es": "tsc --outDir es --module es2015",
-    "build:umd": "npm run build:es && rollup --config && dts-bundle --name dist/bundle --main es --outputAsModuleFolder",
-    "clean": "rimraf dist es lib coverage",
+    "clean": "rimraf es lib coverage",
     "typecheck": "tsc --noEmit",
     "lint": "tslint --project tsconfig.json --type-check --format stylish",
     "test": "jest --coverage --no-cache --config $(node jest.config.js)",
@@ -34,8 +32,7 @@
   ],
   "files": [
     "lib",
-    "es",
-    "dist"
+    "es"
   ],
   "dependencies": {
     "@types/node": "^7.0.8",
@@ -43,18 +40,9 @@
   },
   "devDependencies": {
     "@types/jest": "^19.2.2",
-    "dts-bundle": "^0.7.2",
     "jest": "^19.0.2",
     "jest-environment-node-debug": "^2.0.0",
-    "pascal-case": "^2.0.1",
     "rimraf": "^2.6.1",
-    "rollup": "^0.41.6",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-builtins": "^2.1.0",
-    "rollup-plugin-node-globals": "^1.1.0",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-sourcemaps": "^0.4.1",
-    "rollup-plugin-uglify": "^1.0.1",
     "semver": "^5.3.0",
     "ts-jest": "^19.0.2",
     "tslint": "^4.5.1",
