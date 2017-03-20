@@ -12,7 +12,7 @@
       "--no-cache",
       "--runInBand",
       "--env=node-debug",
-      "--config=jest.config.json"
+      "--config=$(node jest.config.js)"
     ],
     "skipFiles": [
       "<node_internals>/**/*.js",

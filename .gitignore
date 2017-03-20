@@ -1,6 +1,6 @@
 # Created by https://www.gitignore.io/api/node,visualstudiocode,macos
 
-# Generated dirs
+# Generated stuff
 .code
 dist
 lib
