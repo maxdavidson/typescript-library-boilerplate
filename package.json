@@ -4,25 +4,24 @@
   "description": "Boilerplate for TypeScript 2.0 libraries",
   "author": "Max Davidson <davidsonmax@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/maxdavidson/typescript-library-boilerplate.git"
-  },
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "browser": "bundle.js",
-  "typings": "typings.d.ts",
+  "repository": "git+https://github.com/maxdavidson/typescript-library-boilerplate.git",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "browser": "dist/bundle.js",
+  "types": "dist/bundle.d.ts",
   "scripts": {
-    "build": "npm run build:cjs & npm run build:umd",
-    "build:cjs": "tsc --outDir dist/cjs --module commonjs",
-    "build:es": "tsc --outDir dist/es --module es2015",
-    "build:umd": "npm run build:es && rollup --config && dts-bundle --name typings --main dist/es --outputAsModuleFolder",
-    "clean": "rimraf dist coverage",
+    "build": "npm run build:lib & npm run build:umd",
+    "build:lib": "tsc --outDir lib --module commonjs",
+    "build:es": "tsc --outDir es --module es2015",
+    "build:umd": "npm run build:es && rollup --config && dts-bundle --name dist/bundle --main es --outputAsModuleFolder",
+    "clean": "rimraf dist es lib coverage",
     "typecheck": "tsc --noEmit",
     "lint": "tslint --project tsconfig.json --type-check --format stylish",
-    "test": "jest --config jest.config.json --coverage --no-cache --runInBand",
-    "test:watch": "jest --config jest.config.json --watch",
+    "test": "jest --coverage --no-cache --config $(node jest.config.js)",
+    "test:watch": "jest --watch --updateSnapshot --config $(node jest.config.js)",
+    "prepare": "npm run build",
     "prebuild": "npm run clean",
+    "postbuild": "rimraf {lib,es}/**/__tests__",
     "posttest": "npm run typecheck && npm run lint",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
@@ -34,27 +33,31 @@
     "boilerplate"
   ],
   "files": [
+    "lib",
+    "es",
     "dist"
   ],
   "dependencies": {
-    "@types/node": "^7.0.5",
-    "tslib": "^1.5.0"
+    "@types/node": "^7.0.8",
+    "tslib": "^1.6.0"
   },
   "devDependencies": {
-    "@types/jest": "^18.1.1",
+    "@types/jest": "^19.2.2",
     "dts-bundle": "^0.7.2",
-    "jest": "^19.0.0",
-    "pascal-case": "^2.0.0",
-    "rimraf": "^2.5.4",
-    "rollup": "^0.41.4",
-    "rollup-plugin-commonjs": "^7.0.0",
-    "rollup-plugin-node-builtins": "^2.0.0",
+    "jest": "^19.0.2",
+    "jest-environment-node-debug": "^2.0.0",
+    "pascal-case": "^2.0.1",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-builtins": "^2.1.0",
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-sourcemaps": "^0.4.1",
     "rollup-plugin-uglify": "^1.0.1",
-    "ts-jest": "^19.0.0",
-    "tslint": "^4.4.2",
-    "typescript": "^2.2.0"
+    "semver": "^5.3.0",
+    "ts-jest": "^19.0.2",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "Debug tests",
+    "type": "node",
+    "request": "launch",
+    "protocol": "auto",
+    "stopOnEntry": false,
+    "console": "integratedTerminal",
+    "args": [
+      "node_modules/.bin/jest",
+      "--no-cache",
+      "--runInBand",
+      "--env=node-debug",
+      "--config=$(node jest.config.js)"
+    ],
+    "skipFiles": [
+      "<node_internals>/**/*.js",
+      "${workspaceRoot}/node_modules/**/*.js"
+    ]
+  }]
+}
