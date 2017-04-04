@@ -37,6 +37,7 @@ var jestConfig = {
   globals: {
     __TS_CONFIG__: {
       target: getSupportedTypescriptTarget(),
+      module: 'commonjs',
       inlineSourceMap: true
     }
   }
