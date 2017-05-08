@@ -8,4 +8,4 @@ cache:
     - node_modules
 after_success:
   - npm i -g coveralls
-  - cat coverage/remapped/lcov.info | coveralls
+  - cat coverage/lcov.info | coveralls
