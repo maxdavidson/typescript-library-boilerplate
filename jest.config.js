@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 var semver = require('semver');
 
 function getSupportedTypescriptTarget() {
@@ -17,11 +16,10 @@ function getSupportedTypescriptTarget() {
   }
 }
 
-var jestConfig = {
+module.exports = {
   transform: {
     '.(tsx?)': '<rootDir>/node_modules/ts-jest/preprocessor.js'
   },
-  testResultsProcessor: '<rootDir>/node_modules/ts-jest/coverageprocessor.js',
   testMatch: [
     '**/__tests__/**/*.{t,j}s?(x)',
     '**/?(*.)(spec|test).{t,j}s?(x)'
@@ -34,18 +32,11 @@ var jestConfig = {
     '!src/**/*.d.ts',
   ],
   moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
+  mapCoverage: true,
   globals: {
     __TS_CONFIG__: {
       target: getSupportedTypescriptTarget(),
-      module: 'commonjs',
-      inlineSourceMap: true
+      module: 'commonjs'
     }
   }
 };
-
-module.exports = jestConfig;
-
-// If this file is run as an executable, print the config stringified to JSON
-if (require.main === module) {
-  console.log(JSON.stringify(jestConfig));
-}

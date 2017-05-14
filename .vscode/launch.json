@@ -4,15 +4,13 @@
     "name": "Debug tests",
     "type": "node",
     "request": "launch",
-    "protocol": "auto",
+    "protocol": "inspector",
     "stopOnEntry": false,
-    "console": "integratedTerminal",
     "args": [
       "node_modules/.bin/jest",
       "--no-cache",
       "--runInBand",
-      "--env=node-debug",
-      "--config=$(node jest.config.js)"
+      "--env=node-debug"
     ],
     "skipFiles": [
       "<node_internals>/**/*.js",
