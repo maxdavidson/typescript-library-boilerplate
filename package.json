@@ -48,7 +48,7 @@
     "jest-environment-node-debug": "^2.0.0",
     "pascal-case": "^2.0.1",
     "rimraf": "^2.6.1",
-    "rollup": "^0.45.2",
+    "rollup": "^0.47.4",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-builtins": "^2.1.0",
     "rollup-plugin-node-globals": "^1.1.0",
