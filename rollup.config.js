@@ -9,8 +9,10 @@ import pascalCase from 'pascal-case';
 const pkg = require('./package');
 
 export default {
-  moduleId: pkg.name,
   moduleName: pascalCase(pkg.name),
+  amd: {
+    id: pkg.name,
+  },
   entry: 'es/index.js',
   dest: 'dist/bundle.js',
   format: 'umd',
