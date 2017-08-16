@@ -34,9 +34,12 @@ module.exports = {
   moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
   mapCoverage: true,
   globals: {
-    __TS_CONFIG__: {
-      target: getSupportedTypescriptTarget(),
-      module: 'commonjs'
+    "ts-jest": {
+      skipBabel: true,
+      tsConfigFile: {
+        target: getSupportedTypescriptTarget(),
+        module: 'commonjs',
+      }
     }
   }
 };
