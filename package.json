@@ -19,7 +19,7 @@
     "lint": "tslint --project tsconfig.json --type-check --format stylish",
     "test": "jest --env=jsdom --coverage",
     "test:watch": "jest --env=jsdom --watch --updateSnapshot",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "prebuild": "npm run clean",
     "postbuild": "rimraf {lib,es}/**/__tests__",
     "posttest": "npm run typecheck && npm run lint",
@@ -48,15 +48,15 @@
     "pascal-case": "^2.0.1",
     "rimraf": "^2.6.1",
     "rollup": "^0.47.4",
-    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-commonjs": "^8.1.0",
     "rollup-plugin-node-builtins": "^2.1.0",
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.1",
     "rollup-plugin-uglify": "^2.0.0",
-    "semver": "^5.3.0",
+    "semver": "^5.4.0",
     "ts-jest": "^20.0.0",
-    "tslint": "^5.0.0",
-    "typescript": "^2.2.1"
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.0"
   }
 }
