@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/jest": "^20.0.0",
     "dts-bundle": "^0.7.2",
-    "jest": "^20.0.0",
+    "jest": "^21.0.0",
     "pascal-case": "^2.0.1",
     "rimraf": "^2.6.1",
     "rollup": "^0.47.4",
