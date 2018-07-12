@@ -1,3 +1,5 @@
+> This project was forked from [maxdavidson](https://github.com/maxdavidson) ([typescript-library-boilerplate](https://github.com/maxdavidson/typescript-library-boilerplate))
+
 # typescript-library-boilerplate
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/oBusk/typescript-library-boilerplate.svg)](https://greenkeeper.io/)

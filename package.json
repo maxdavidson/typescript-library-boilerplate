@@ -1,8 +1,11 @@
 {
-  "name": "typescript-library-boilerplate",
+  "name": "@obusk/typescript-library-boilerplate",
   "version": "0.1.0",
   "description": "Boilerplate for TypeScript 2.0 libraries",
   "author": "Oscar Busk <oscar.busk@gmail.com>",
+  "contributors": [
+    "Max Davidson <davidsonmax@gmail.com>"
+  ],
   "license": "MIT",
   "repository": "git+https://github.com/oBusk/typescript-library-boilerplate.git",
   "main": "lib/index.js",
