@@ -3,27 +3,28 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import nodeGlobals from 'rollup-plugin-node-globals';
 import nodeBuiltins from 'rollup-plugin-node-builtins';
 import commonjs from 'rollup-plugin-commonjs';
-import uglify from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
 import pascalCase from 'pascal-case';
-
-const pkg = require('./package');
+import pkg from './package.json';
 
 export default {
-  moduleName: pascalCase(pkg.name),
-  amd: {
-    id: pkg.name,
+  input: 'es/index.js',
+  output: {
+    name: pascalCase(pkg.name),
+    file: 'dist/bundle.js',
+    format: 'umd',
+    exports: 'named',
+    sourcemap: true,
+    amd: {
+      id: pkg.name
+    }
   },
-  entry: 'es/index.js',
-  dest: 'dist/bundle.js',
-  format: 'umd',
-  exports: 'named',
-  sourceMap: true,
   plugins: [
     sourcemaps(),
     nodeResolve(),
     nodeGlobals(),
     nodeBuiltins(),
     commonjs(),
-    uglify()
+    terser()
   ]
 };
