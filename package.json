@@ -56,7 +56,8 @@
     "rollup-plugin-node-globals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.1",
-    "rollup-plugin-uglify": "^4.0.0",
+    "rollup-plugin-terser": "^1.0.1",
+    "semver": "^5.4.0",
     "ts-jest": "^23.0.0",
     "tslint": "^5.10.0",
     "typescript": "^2.4.0"
