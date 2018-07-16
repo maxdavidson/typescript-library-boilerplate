@@ -21,7 +21,7 @@
     "test:watch": "jest --env=jsdom --watch --updateSnapshot",
     "prepublishOnly": "npm run build",
     "prebuild": "npm run clean",
-    "postbuild": "rimraf {lib,es}/**/__tests__",
+    "postbuild": "rimraf {lib,es}/**/__tests__ {lib,es}/**/*.{spec,test}.{js,d.ts,js.map}",
     "posttest": "npm run typecheck && npm run lint",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
