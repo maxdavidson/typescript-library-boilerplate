@@ -16,15 +16,8 @@ export default {
     exports: 'named',
     sourcemap: true,
     amd: {
-      id: pkg.name
-    }
+      id: pkg.name,
+    },
   },
-  plugins: [
-    sourcemaps(),
-    nodeResolve(),
-    nodeGlobals(),
-    nodeBuiltins(),
-    commonjs(),
-    terser()
-  ]
+  plugins: [sourcemaps(), nodeResolve(), nodeGlobals(), nodeBuiltins(), commonjs(), terser()],
 };
