@@ -1,7 +1,7 @@
 {
   "name": "typescript-library-boilerplate",
   "version": "0.1.0",
-  "description": "Boilerplate for TypeScript 2.0 libraries",
+  "description": "Boilerplate for TypeScript libraries",
   "author": "Max Davidson <davidsonmax@gmail.com>",
   "license": "MIT",
   "repository": "git+https://github.com/maxdavidson/typescript-library-boilerplate.git",
@@ -40,7 +40,7 @@
   ],
   "dependencies": {
     "@types/node": "^8.0.0",
-    "tslib": "^1.6.0"
+    "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@types/jest": "^23.0.0",
@@ -61,6 +61,6 @@
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-plugin-prettier": "^1.3.0",
-    "typescript": "^2.4.0"
+    "typescript": "^2.9.2"
   }
 }
