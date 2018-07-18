@@ -5,7 +5,7 @@
     "type": "node",
     "request": "launch",
     "protocol": "inspector",
-    "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+    "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
     "args": [
       "--env=jsdom",
       "--no-cache",
