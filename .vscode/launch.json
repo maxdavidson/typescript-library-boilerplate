@@ -11,7 +11,7 @@
       "--no-cache",
       "--runInBand",
       "--findRelatedTests",
-      "${file}"
+      "${relativeFile}"
     ],
     "skipFiles": [
       "<node_internals>/**/*.js"
