@@ -4,17 +4,22 @@
     "name": "Debug",
     "type": "node",
     "request": "launch",
-    "protocol": "inspector",
-    "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+    "program": "${workspaceFolder}/node_modules/.bin/jest",
     "args": [
       "--env=jsdom",
       "--no-cache",
       "--runInBand",
       "--findRelatedTests",
-      "${file}"
+      "${relativeFile}"
     ],
+    "console": "integratedTerminal",
+    "internalConsoleOptions": "neverOpen",
     "skipFiles": [
       "<node_internals>/**/*.js"
-    ]
-  }]
+    ],
+    "windows": {
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+    }
+  },
+]
 }
