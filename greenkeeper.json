@@ -1,0 +1,5 @@
+{
+  "ignore": [
+    "@types/node" // We want to keep the @types/node to the same version as the node we plan to support
+  ]
+}
