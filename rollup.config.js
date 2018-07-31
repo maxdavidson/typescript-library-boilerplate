@@ -8,23 +8,23 @@ import pascalCase from 'pascal-case';
 import pkg from './package.json';
 
 export default {
-  input: 'es/index.js',
-  output: {
-    name: pascalCase(pkg.name),
-    file: 'dist/bundle.js',
-    format: 'umd',
-    exports: 'named',
-    sourcemap: true,
-    amd: {
-      id: pkg.name
-    }
-  },
-  plugins: [
-    sourcemaps(),
-    nodeResolve(),
-    nodeGlobals(),
-    nodeBuiltins(),
-    commonjs(),
-    terser()
-  ]
+    input: 'es/index.js',
+    output: {
+        name: pascalCase(pkg.name),
+        file: 'dist/bundle.js',
+        format: 'umd',
+        exports: 'named',
+        sourcemap: true,
+        amd: {
+            id: pkg.name,
+        },
+    },
+    plugins: [
+        sourcemaps(),
+        nodeResolve(),
+        nodeGlobals(),
+        nodeBuiltins(),
+        commonjs(),
+        terser(),
+    ],
 };
