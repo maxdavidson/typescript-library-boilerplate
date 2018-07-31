@@ -1,31 +1,25 @@
 {
-  "extends": ["tslint:recommended"],
+  "extends": "tslint:latest",
   "rules": {
-    "arrow-parens": false,
-    "arrow-return-shorthand": [true],
-    "import-spacing": true,
-    "interface-name": [false],
-    "interface-over-type-literal": false,
-    "max-classes-per-file": [false],
-    "member-access": [false],
-    "no-require-imports": true,
     "object-literal-sort-keys": false,
-    "ordered-imports": [false],
-    "prefer-const": true,
-    "quotemark": [true, "single", "jsx-double"],
-    "space-before-function-paren": [true, {
-      "anonymous": "always",
-      "asyncArrow": "always",
-      "constructor": "never",
-      "method": "never",
-      "named": "never"
-    }],
-    "variable-name": [
+    "quotemark": [
       true,
-      "ban-keywords",
-      "check-format",
-      "allow-pascal-case",
-      "allow-leading-underscore"
+      "single",
+      "avoid-escape"
     ]
-  }
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ]
+  },
+  "rulesDirectory": [
+    /*
+      * A list of relative or absolute paths to directories that contain custom rules.
+      * See the Custom Rules documentation below for more details.
+      */
+  ]
 }

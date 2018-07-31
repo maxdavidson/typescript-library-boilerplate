@@ -1,4 +1,4 @@
-import { HelloWorld, doSomethingAsync } from '..';
+import { doSomethingAsync, HelloWorld } from '..';
 
 test('hello world', () => {
   const thing = new HelloWorld('neat');
