@@ -40,6 +40,9 @@
     "es",
     "dist"
   ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "dependencies": {
     "@types/node": "^8.0.0",
     "tslib": "^1.6.0"
