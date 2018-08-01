@@ -6,7 +6,7 @@ node_js:
   - stable
 cache:
   directories:
-    - node_modules
+    - $HOME/.npm
 after_success:
   - npm i -g coveralls
   - cat coverage/lcov.info | coveralls
