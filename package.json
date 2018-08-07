@@ -49,7 +49,7 @@
     "pascal-case": "^2.0.1",
     "prettier": "^1.13.7",
     "rimraf": "^2.6.1",
-    "rollup": "^0.63.0",
+    "rollup": "^0.64.0",
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-node-builtins": "^2.1.0",
     "rollup-plugin-node-globals": "^1.1.0",
