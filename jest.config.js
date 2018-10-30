@@ -1,35 +1,33 @@
+'use strict';
 const semver = require('semver');
 
-function getTsConfigFile() {
+function getSupportedTypescriptTarget() {
   const nodeVersion = process.versions.node;
 
-  if (semver.gt(nodeVersion, '7.6.0')) {
-    return 'tsconfig.jest.json';
+  if (semver.gt(nodeVersion, '10.0.0')) {
+    return 'es2018';
+  } else if (semver.gt(nodeVersion, '7.6.0')) {
+    return 'es2017';
+  } else if (semver.gt(nodeVersion, '7.0.0')) {
+    return 'es2016';
+  } else if (semver.gt(nodeVersion, '6.0.0')) {
+    return 'es2015';
   } else {
-    return 'tsconfig.jest-compat.json';
+    return 'es5';
   }
 }
 
 module.exports = {
-  transform: {
-    '.(tsx?)': '<rootDir>/node_modules/ts-jest/preprocessor.js'
-  },
-  testMatch: [
-    '**/__tests__/**/*.{t,j}s?(x)',
-    '**/?(*.)(spec|test).{t,j}s?(x)'
-  ],
-  testPathIgnorePatterns: [
-    '<rootDir>/(node_modules|lib|es|dist)'
-  ],
+  preset: 'ts-jest',
   collectCoverageFrom: [
     'src/**/*.{t,j}s?(x)',
     '!src/**/*.d.ts',
   ],
-  moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
   globals: {
     'ts-jest': {
-      skipBabel: true,
-      tsConfigFile: getTsConfigFile()
+      tsConfig: {
+        target: getSupportedTypescriptTarget(),
+      }
     }
   }
 };
