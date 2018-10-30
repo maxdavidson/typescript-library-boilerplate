@@ -1,3 +1,5 @@
+import { sleep } from './utils';
+
 export * from './utils';
 
 export class HelloWorld {
@@ -12,9 +14,7 @@ export class HelloWorld {
   }
 }
 
-const pause = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms));
-
 export async function doSomethingAsync() {
-  await pause(250);
+  await sleep(250);
   return 'hello';
 }

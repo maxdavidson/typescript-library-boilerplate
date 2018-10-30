@@ -15,10 +15,5 @@
     "noUnusedLocals": true,
     "strictNullChecks": true
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "es",
-    "lib"
-  ]
+  "exclude": ["node_modules", "dist", "es", "lib"]
 }
