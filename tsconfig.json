@@ -4,7 +4,6 @@
     "module": "commonjs",
     "rootDir": "src",
     "outDir": ".code",
-    "newLine": "LF",
     "lib": ["dom", "es2017"],
     "moduleResolution": "node",
     "importHelpers": true,
@@ -12,13 +11,9 @@
     "pretty": true,
     "sourceMap": true,
     "inlineSources": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "es",
-    "lib"
-  ]
+  "exclude": ["node_modules", "dist", "es", "lib"]
 }
