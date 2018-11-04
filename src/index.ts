@@ -15,6 +15,6 @@ export class HelloWorld {
 }
 
 export async function doSomethingAsync() {
-  await sleep(250);
-  return 'hello';
+    await sleep(250);
+    return 'hello';
 }
