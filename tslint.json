@@ -1,5 +1,9 @@
 {
-    "extends": "tslint:latest",
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-prettier",
+        "tslint-plugin-prettier"
+    ],
     "rules": {
         "indent": [
             true,

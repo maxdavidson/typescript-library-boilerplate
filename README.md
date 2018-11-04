@@ -9,13 +9,12 @@
 [![Dependency Status](https://david-dm.org/oBusk/typescript-library-boilerplate/status.svg)](https://david-dm.org/oBusk/typescript-library-boilerplate)
 [![devDependency Status](https://david-dm.org/oBusk/typescript-library-boilerplate/dev-status.svg)](https://david-dm.org/oBusk/typescript-library-boilerplate?type=dev)
 
-Opinionated boilerplate for TypeScript 2.0 libraries.
-
+Opinionated boilerplate for TypeScript libraries.
 
 ## Features
 
-* [TypeScript 2.0](http://www.typescriptlang.org)
-* Code quality with [tslint](http://palantir.github.io/tslint/)
-* Module bundling with [Rollup](http://rollupjs.org)
-* Unit testing with [Jest](https://github.com/facebook/jest)
-* Continuous integration with [Travis](https://travis-ci.org)
+- [TypeScript](http://www.typescriptlang.org)
+- Linting with [tslint](http://palantir.github.io/tslint/)
+- Module bundling with [Rollup](http://rollupjs.org)
+- Unit testing with [Jest](https://github.com/facebook/jest)
+- Continuous integration with [Travis](https://travis-ci.org)
