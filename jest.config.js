@@ -18,6 +18,7 @@ function getSupportedTypescriptTarget() {
 }
 
 module.exports = {
+  testURL: 'http://localhost',
   preset: 'ts-jest',
   collectCoverageFrom: [
     'src/**/*.{t,j}s?(x)',
