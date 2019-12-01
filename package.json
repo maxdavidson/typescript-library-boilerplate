@@ -46,7 +46,7 @@
     "@types/jest": "^23.0.0",
     "dts-bundle": "^0.7.2",
     "jest": "^23.0.0",
-    "pascal-case": "^2.0.1",
+    "pascal-case": "^3.0.0",
     "prettier": "^1.13.7",
     "rimraf": "^2.6.1",
     "rollup": "^0.66.6",
