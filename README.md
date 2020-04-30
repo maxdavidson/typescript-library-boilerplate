@@ -1,6 +1,6 @@
 # typescript-library-boilerplate
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/maxdavidson/typescript-library-boilerplate.svg)](https://greenkeeper.io/)
+
 
 [![Build Status](https://img.shields.io/travis/maxdavidson/typescript-library-boilerplate/master.svg)](https://travis-ci.org/maxdavidson/typescript-library-boilerplate)
 [![Coverage Status](https://img.shields.io/coveralls/maxdavidson/typescript-library-boilerplate/master.svg)](https://coveralls.io/github/maxdavidson/typescript-library-boilerplate?branch=master)
